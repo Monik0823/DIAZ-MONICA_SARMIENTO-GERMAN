@@ -1,106 +1,160 @@
-[2023-08-09 17:14:14] [ INFO ] [EntidadServiceTest:28] Creación de tabla de la entidad
-[2023-08-09 17:14:14] [ INFO ] [EntidadDaoH2:42] Entidad guardada: 
-Id: 1 - Odontologo: Perez - Pepito - Matricula: 50
-[2023-08-09 17:15:50] [ INFO ] [EntidadServiceTest:28] Creación de tabla de la entidad
-[2023-08-09 17:15:50] [ INFO ] [EntidadDaoH2:82] Se ha encontrado la entidad null
-[2023-08-09 17:39:27] [ INFO ] [EntidadServiceTest:28] Creación de tabla de la entidad
-[2023-08-09 17:39:28] [ INFO ] [EntidadDaoH2:81] <buscarPorId> - Sentencia SELECT <<prep0: SELECT * FROM ENTIDADES WHERE ID = ? {1: 1}>>
-[2023-08-09 17:39:28] [ INFO ] [EntidadDaoH2:86] <buscarPorId> - Se ha encontrado la entidad null
-[2023-08-09 17:44:05] [ INFO ] [EntidadServiceTest:28] Creación de tabla de la entidad
-[2023-08-09 17:44:06] [ INFO ] [EntidadDaoH2:81] <buscarPorId> - Sentencia SELECT <<prep0: SELECT * FROM ENTIDADES WHERE ID = ? {1: 1}>>
-[2023-08-09 17:44:06] [ INFO ] [EntidadDaoH2:82] <buscarPorId> - null
-[2023-08-09 17:44:06] [ INFO ] [EntidadDaoH2:87] <buscarPorId> - Se ha encontrado la entidad null
-[2023-08-09 17:46:10] [ INFO ] [EntidadServiceTest:28] Creación de tabla de la entidad
-[2023-08-09 17:46:10] [ INFO ] [EntidadDaoH2:81] <buscarPorId> - Sentencia SELECT <<prep0: SELECT * FROM ENTIDADES WHERE ID = ? {1: 1}>>
-[2023-08-09 17:46:10] [ INFO ] [EntidadDaoH2:82] <buscarPorId> - rs0: org.h2.result.LocalResult@45385f75 columns: 4 rows: 0 pos: -1
-[2023-08-09 17:46:10] [ INFO ] [EntidadDaoH2:87] <buscarPorId> - Se ha encontrado la entidad null
-[2023-08-09 17:51:13] [ INFO ] [EntidadServiceTest:28] Creación de tabla de la entidad
-[2023-08-09 17:51:13] [ INFO ] [EntidadDaoH2:81] <buscarPorId> - Sentencia SELECT <<prep0: SELECT * FROM ENTIDADES WHERE ID = ? {1: 1}>>
-[2023-08-09 17:51:13] [ INFO ] [EntidadDaoH2:88] <buscarPorId> - No se ha encontrado la entidad 1
-[2023-08-09 17:54:42] [ INFO ] [EntidadServiceTest:28] Creación de tabla de la entidad
-[2023-08-09 17:54:42] [ INFO ] [EntidadDaoH2:42] Entidad guardada: 
-Id: 1 - Odontologo: Perez - Pepito - Matricula: 50
-[2023-08-09 17:54:43] [ INFO ] [EntidadDaoH2:81] <buscarPorId> - Sentencia SELECT <<prep1: SELECT * FROM ENTIDADES WHERE ID = ? {1: 1}>>
-[2023-08-09 17:54:43] [ INFO ] [EntidadDaoH2:91] <buscarPorId> - Se ha encontrado la entidad 
-Id: 1 - Odontologo: Perez - Pepito - Matricula: 50
-[2023-08-09 17:59:40] [ INFO ] [EntidadServiceTest:28] Creación de tabla de la entidad
-[2023-08-09 17:59:40] [ INFO ] [EntidadDaoH2:47] Entidad guardada: 
-Id: 1 - Odontologo: Perez - Pepito - Matricula: 50
-[2023-08-09 17:59:40] [ INFO ] [EntidadDaoH2:86] 
-[2023-08-09 17:59:40] [ INFO ] [EntidadDaoH2:87] <buscarPorId> - Sentencia SELECT <<prep1: SELECT * FROM ENTIDADES WHERE ID = ? {1: 1}>>
-[2023-08-09 17:59:40] [ INFO ] [EntidadDaoH2:97] <buscarPorId> - Se ha encontrado la entidad 
-Id: 1 - Odontologo: Perez - Pepito - Matricula: 50
-[2023-08-09 18:15:56] [ INFO ] [EntidadServiceTest:28] Creación de tabla de la entidad
-[2023-08-09 18:15:57] [ INFO ] [EntidadDaoH2:37] Insertados - 1
-[2023-08-09 18:15:57] [ INFO ] [EntidadDaoH2:50] Entidad guardada: 
-Id: 1 - Odontologo: Perez - Pepito - Matricula: 50
-[2023-08-09 18:16:44] [ INFO ] [EntidadServiceTest:28] Creación de tabla de la entidad
-[2023-08-09 18:16:44] [ ERROR] [EntidadDaoH2:53] Columna "APELLIDOS" no encontrada
-Column "APELLIDOS" not found; SQL statement:
-INSERT INTO ENTIDADES (APELLIDOS, NOMBRE, MATRICULA) VALUES (?, ?, ?) [42122-220]
-[2023-08-09 18:30:30] [ INFO ] [EntidadServiceTest:28] Creación de tabla de la entidad
-[2023-08-09 18:30:30] [ INFO ] [EntidadDaoH2:37] <registrar> - Registros insertados - 1
-[2023-08-09 18:30:30] [ INFO ] [EntidadDaoH2:47] <registrar> - Entidad guardada: 
-Id: 1 - Odontologo: Perez - Pepito - Matricula: 50
-[2023-08-09 18:30:47] [ INFO ] [EntidadServiceTest:28] Creación de tabla de la entidad
-[2023-08-09 18:30:48] [ INFO ] [EntidadDaoH2:37] <registrar> - Registros insertados - 1
-[2023-08-09 18:30:48] [ INFO ] [EntidadDaoH2:47] <registrar> - Entidad guardada: 
-Id: 1 - Odontologo: Perez - Pepito - Matricula: 50
-[2023-08-09 18:30:48] [ INFO ] [EntidadDaoH2:85] 
-[2023-08-09 18:30:48] [ INFO ] [EntidadDaoH2:86] <buscarPorId> - Sentencia SELECT <<prep1: SELECT * FROM ENTIDADES WHERE ID = ? {1: 1}>>
-[2023-08-09 18:30:48] [ INFO ] [EntidadDaoH2:96] <buscarPorId> - Se ha encontrado la entidad 
-Id: 1 - Odontologo: Perez - Pepito - Matricula: 50
-[2023-08-09 18:31:43] [ INFO ] [EntidadServiceTest:28] Creación de tabla de la entidad
-[2023-08-09 18:31:43] [ INFO ] [EntidadDaoH2:85] <buscarPorId> - Sentencia SELECT <<prep0: SELECT * FROM ENTIDADES WHERE ID = ? {1: 1}>>
-[2023-08-09 18:31:43] [ INFO ] [EntidadDaoH2:92] <buscarPorId> - No se ha encontrado la entidad 1
-[2023-08-09 18:33:43] [ INFO ] [EntidadServiceTest:28] Creación de tabla de la entidad
-[2023-08-09 18:33:43] [ INFO ] [EntidadDaoH2:37] <registrar> - Registros insertados - 1
-[2023-08-09 18:33:43] [ INFO ] [EntidadDaoH2:47] <registrar> - Entidad guardada: 
-Id: 1 - Odontologo: Perez - Pepito - Matricula: 50
-[2023-08-09 18:33:43] [ INFO ] [EntidadDaoH2:37] <registrar> - Registros insertados - 1
-[2023-08-09 18:33:43] [ INFO ] [EntidadDaoH2:47] <registrar> - Entidad guardada: 
-Id: 2 - Odontologo: Ramirez - Jacinto - Matricula: 25
-[2023-08-09 18:33:43] [ INFO ] [EntidadDaoH2:85] <buscarPorId> - Sentencia SELECT <<prep2: SELECT * FROM ENTIDADES WHERE ID = ? {1: 1}>>
-[2023-08-09 18:33:43] [ INFO ] [EntidadDaoH2:95] <buscarPorId> - Se ha encontrado la entidad 
-Id: 1 - Odontologo: Perez - Pepito - Matricula: 50
-[2023-08-09 18:34:30] [ INFO ] [EntidadServiceTest:28] Creación de tabla de la entidad
-[2023-08-09 18:34:30] [ INFO ] [EntidadDaoH2:37] <registrar> - Registros insertados - 1
-[2023-08-09 18:34:30] [ INFO ] [EntidadDaoH2:47] <registrar> - Entidad guardada: 
-Id: 1 - Entidad: Perez - Pepito - Matricula: 50
-[2023-08-09 18:34:30] [ INFO ] [EntidadDaoH2:37] <registrar> - Registros insertados - 1
-[2023-08-09 18:34:30] [ INFO ] [EntidadDaoH2:47] <registrar> - Entidad guardada: 
-Id: 2 - Entidad: Ramirez - Jacinto - Matricula: 25
-[2023-08-09 18:34:30] [ INFO ] [EntidadDaoH2:85] <buscarPorId> - Sentencia SELECT <<prep2: SELECT * FROM ENTIDADES WHERE ID = ? {1: 1}>>
-[2023-08-09 18:34:30] [ INFO ] [EntidadDaoH2:95] <buscarPorId> - Se ha encontrado la entidad 
-Id: 1 - Entidad: Perez - Pepito - Matricula: 50
-[2023-08-09 18:37:34] [ INFO ] [EntidadServiceTest:28] Creación de tabla de la entidad
-[2023-08-09 18:37:35] [ INFO ] [EntidadDaoH2:37] <registrar> - Registros insertados - 1
-[2023-08-09 18:37:35] [ INFO ] [EntidadDaoH2:47] <registrar> - Entidad guardada: 
-Id: 1 - Entidad: Perez - Pepito - Matricula: 50
-[2023-08-09 18:37:35] [ INFO ] [EntidadDaoH2:37] <registrar> - Registros insertados - 1
-[2023-08-09 18:37:35] [ INFO ] [EntidadDaoH2:47] <registrar> - Entidad guardada: 
-Id: 2 - Entidad: Ramirez - Jacinto - Matricula: 25
-[2023-08-09 18:37:35] [ INFO ] [EntidadDaoH2:123] <listarTodos> - Listado de todos las entidades: [
-Id: 1 - Entidad: Perez - Pepito - Matricula: 50, 
-Id: 2 - Entidad: Ramirez - Jacinto - Matricula: 25]
-[2023-08-09 18:40:17] [ INFO ] [EntidadServiceTest:28] Creación de tabla de la entidad
-[2023-08-09 18:40:17] [ INFO ] [EntidadServiceTest:78] --------------------------------------------------
-[2023-08-09 18:40:17] [ INFO ] [EntidadServiceTest:79]        Test: deberiaHaberUnaListaNoVacia          
-[2023-08-09 18:40:17] [ INFO ] [EntidadDaoH2:37] <registrar> - Registros insertados - 1
-[2023-08-09 18:40:17] [ INFO ] [EntidadDaoH2:47] <registrar> - Entidad guardada: 
-Id: 1 - Entidad: Perez - Pepito - Matricula: 50
-[2023-08-09 18:40:17] [ INFO ] [EntidadDaoH2:37] <registrar> - Registros insertados - 1
-[2023-08-09 18:40:17] [ INFO ] [EntidadDaoH2:47] <registrar> - Entidad guardada: 
-Id: 2 - Entidad: Ramirez - Jacinto - Matricula: 25
-[2023-08-09 18:40:17] [ INFO ] [EntidadDaoH2:123] <listarTodos> - Listado de todos las entidades: [
-Id: 1 - Entidad: Perez - Pepito - Matricula: 50, 
-Id: 2 - Entidad: Ramirez - Jacinto - Matricula: 25]
-[2023-08-09 18:40:17] [ INFO ] [EntidadServiceTest:89] --------------------------------------------------
-[2023-08-09 18:41:41] [ INFO ] [EntidadServiceTest:28] Creación de tabla de la entidad
-[2023-08-09 18:41:42] [ INFO ] [EntidadServiceTest:53] --------------------------------------------------
-[2023-08-09 18:41:42] [ INFO ] [EntidadServiceTest:54]            Test: deberiaAgregarUnEntidad          
-[2023-08-09 18:41:42] [ INFO ] [EntidadServiceTest:55] --------------------------------------------------
-[2023-08-09 18:41:42] [ INFO ] [EntidadDaoH2:37] <registrar> - Registros insertados - 1
-[2023-08-09 18:41:42] [ INFO ] [EntidadDaoH2:47] <registrar> - Entidad guardada: 
-Id: 1 - Entidad: Perez - Pepito - Matricula: 50
-[2023-08-09 18:41:42] [ INFO ] [EntidadServiceTest:60] -----------------Fin Test-------------------------
+[2023-08-09 21:56:51] [ INFO ] [OdontologoServiceTest:27] Creación de la tabla ODONTOLOGOS
+[2023-08-09 21:56:52] [ ERROR] [OdontologoServiceTest:32] Se genera error creando la tabla ODONTOLOGOS
+[2023-08-09 21:56:52] [ ERROR] [OdontologoServiceTest:33] Error de Sintaxis en sentencia SQL "\000aCREATE TABLE ODONTOLOGOS(\000a  ID INT AUTO_INCREMENT PRIMARY KEY,\000a  MATRICULA INT NOT NULL,\000a  NOMBRE VARCHAR(100) NOT NULL,\000a  APELLIDO VARCHAR(100) NOT NULL,\000a  [*])"; se esperaba "identifier"
+Syntax error in SQL statement "\000aCREATE TABLE ODONTOLOGOS(\000a  ID INT AUTO_INCREMENT PRIMARY KEY,\000a  MATRICULA INT NOT NULL,\000a  NOMBRE VARCHAR(100) NOT NULL,\000a  APELLIDO VARCHAR(100) NOT NULL,\000a  [*])"; expected "identifier"; SQL statement:
+
+CREATE TABLE ODONTOLOGOS(
+  ID INT AUTO_INCREMENT PRIMARY KEY,
+  MATRICULA INT NOT NULL,
+  NOMBRE VARCHAR(100) NOT NULL,
+  APELLIDO VARCHAR(100) NOT NULL,
+  ) [42001-220]
+[2023-08-09 21:56:52] [ ERROR] [OdontologoServiceTest:39] Se genera error cerrando la conexión
+[2023-08-09 21:56:52] [ ERROR] [OdontologoServiceTest:40] Cannot invoke "java.sql.Connection.close()" because "com.backend.integrador.test.OdontologoServiceTest.connection" is null
+[2023-08-09 21:56:52] [ INFO ] [OdontologoServiceTest:78] --------------------------------------------------
+[2023-08-09 21:56:52] [ INFO ] [OdontologoServiceTest:79]        Test: deberiaHaberUnaListaNoVacia          
+[2023-08-09 21:56:52] [ INFO ] [OdontologoServiceTest:80] --------------------------------------------------
+[2023-08-09 21:56:52] [ ERROR] [OdontologoDaoH2:48] <registrar> - Error ejecutando sentencia
+[2023-08-09 21:56:52] [ ERROR] [OdontologoDaoH2:49] <registrar> - Tabla "ODONTOLOGOS" no encontrada
+Table "ODONTOLOGOS" not found; SQL statement:
+INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES (?, ?, ?) [42102-220]
+[2023-08-09 21:56:52] [ ERROR] [OdontologoDaoH2:53] <registrar> - Se ejecuta rollback
+[2023-08-09 21:56:52] [ ERROR] [OdontologoDaoH2:54] <registrar> - Tabla "ODONTOLOGOS" no encontrada
+Table "ODONTOLOGOS" not found; SQL statement:
+INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES (?, ?, ?) [42102-220]
+[2023-08-09 21:56:52] [ ERROR] [OdontologoDaoH2:48] <registrar> - Error ejecutando sentencia
+[2023-08-09 21:56:52] [ ERROR] [OdontologoDaoH2:49] <registrar> - Tabla "ODONTOLOGOS" no encontrada
+Table "ODONTOLOGOS" not found; SQL statement:
+INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES (?, ?, ?) [42102-220]
+[2023-08-09 21:56:52] [ ERROR] [OdontologoDaoH2:53] <registrar> - Se ejecuta rollback
+[2023-08-09 21:56:52] [ ERROR] [OdontologoDaoH2:54] <registrar> - Tabla "ODONTOLOGOS" no encontrada
+Table "ODONTOLOGOS" not found; SQL statement:
+INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES (?, ?, ?) [42102-220]
+[2023-08-09 21:56:52] [ ERROR] [OdontologoDaoH2:124] <listarTodos> - Error ejecutando sentencia
+[2023-08-09 21:56:52] [ ERROR] [OdontologoDaoH2:125] <listarTodos> - Tabla "ODONTOLOGOS" no encontrada
+Table "ODONTOLOGOS" not found; SQL statement:
+SELECT * FROM ODONTOLOGOS [42102-220]
+[2023-08-09 21:57:42] [ INFO ] [OdontologoServiceTest:27] Creación de la tabla ODONTOLOGOS
+[2023-08-09 21:57:42] [ INFO ] [OdontologoServiceTest:78] --------------------------------------------------
+[2023-08-09 21:57:42] [ INFO ] [OdontologoServiceTest:79]        Test: deberiaHaberUnaListaNoVacia          
+[2023-08-09 21:57:42] [ INFO ] [OdontologoServiceTest:80] --------------------------------------------------
+[2023-08-09 21:57:42] [ INFO ] [OdontologoDaoH2:36] <registrar> - Registros insertados - 1
+[2023-08-09 21:57:42] [ INFO ] [OdontologoDaoH2:45] <registrar> - Odontologo guardado: 
+Id: 1 - Odontologo: 50 - Pepito - Perez
+[2023-08-09 21:57:42] [ INFO ] [OdontologoDaoH2:36] <registrar> - Registros insertados - 1
+[2023-08-09 21:57:42] [ INFO ] [OdontologoDaoH2:45] <registrar> - Odontologo guardado: 
+Id: 2 - Odontologo: 25 - Jacinto - Ramirez
+[2023-08-09 21:57:43] [ INFO ] [OdontologoDaoH2:121] <listarTodos> - Listado de todos los odontologos: [
+Id: 1 - Odontologo: 50 - Pepito - Perez, 
+Id: 2 - Odontologo: 25 - Jacinto - Ramirez]
+[2023-08-09 21:57:43] [ INFO ] [OdontologoServiceTest:90] -----------------Fin Test-------------------------
+[2023-08-09 22:03:16] [ INFO ] [OdontologoServiceTest:27] Creación de la tabla ODONTOLOGOS
+[2023-08-09 22:03:17] [ ERROR] [OdontologoServiceTest:32] Se genera error creando la tabla ODONTOLOGOS
+[2023-08-09 22:03:17] [ ERROR] [OdontologoServiceTest:33] Columna "MONICA" no encontrada
+Column "MONICA" not found; SQL statement:
+
+INSERT INTO ODONTOLOGOS
+(MATRICULA, NOMBRE, APELLIDO) VALUES (50, "MONICA", "DIAZ")
+ [42122-220]
+[2023-08-09 22:03:17] [ ERROR] [OdontologoServiceTest:39] Se genera error cerrando la conexión
+[2023-08-09 22:03:17] [ ERROR] [OdontologoServiceTest:40] Cannot invoke "java.sql.Connection.close()" because "com.backend.integrador.test.OdontologoServiceTest.connection" is null
+[2023-08-09 22:03:17] [ INFO ] [OdontologoServiceTest:78] --------------------------------------------------
+[2023-08-09 22:03:17] [ INFO ] [OdontologoServiceTest:79]        Test: deberiaHaberUnaListaNoVacia          
+[2023-08-09 22:03:17] [ INFO ] [OdontologoServiceTest:80] --------------------------------------------------
+[2023-08-09 22:03:17] [ INFO ] [OdontologoDaoH2:121] <listarTodos> - Listado de todos los odontologos: []
+[2023-08-09 22:04:09] [ INFO ] [OdontologoServiceTest:27] Creación de la tabla ODONTOLOGOS
+[2023-08-09 22:04:09] [ INFO ] [OdontologoServiceTest:78] --------------------------------------------------
+[2023-08-09 22:04:09] [ INFO ] [OdontologoServiceTest:79]        Test: deberiaHaberUnaListaNoVacia          
+[2023-08-09 22:04:09] [ INFO ] [OdontologoServiceTest:80] --------------------------------------------------
+[2023-08-09 22:04:09] [ INFO ] [OdontologoDaoH2:121] <listarTodos> - Listado de todos los odontologos: [
+Id: 1 - Odontologo: 50 - MONICA - DIAZ, 
+Id: 2 - Odontologo: 20 - ALICIA - HERNANDEZ, 
+Id: 3 - Odontologo: 12 - PEPITO - PEREZ, 
+Id: 4 - Odontologo: 15 - SOFIA - VERGARA]
+[2023-08-09 22:04:09] [ INFO ] [OdontologoServiceTest:92] -----------------Fin Test-------------------------
+[2023-08-09 22:05:28] [ INFO ] [OdontologoServiceTest:27] Creación de la tabla ODONTOLOGOS
+[2023-08-09 22:05:28] [ INFO ] [OdontologoServiceTest:63] --------------------------------------------------
+[2023-08-09 22:05:28] [ INFO ] [OdontologoServiceTest:64]     Test: deberiaEncontrarElOdontologoConId1      
+[2023-08-09 22:05:28] [ INFO ] [OdontologoServiceTest:65] --------------------------------------------------
+[2023-08-09 22:05:28] [ INFO ] [OdontologoDaoH2:36] <registrar> - Registros insertados - 1
+[2023-08-09 22:05:28] [ INFO ] [OdontologoDaoH2:45] <registrar> - Odontologo guardado: 
+Id: 5 - Odontologo: 50 - Pepito - Perez
+[2023-08-09 22:05:28] [ INFO ] [OdontologoDaoH2:36] <registrar> - Registros insertados - 1
+[2023-08-09 22:05:28] [ INFO ] [OdontologoDaoH2:45] <registrar> - Odontologo guardado: 
+Id: 6 - Odontologo: 25 - Jacinto - Ramirez
+[2023-08-09 22:05:28] [ INFO ] [OdontologoDaoH2:83] <buscarPorId> - Sentencia SELECT <<prep2: SELECT * FROM ODONTOLOGOS WHERE ID = ? {1: 1}>>
+[2023-08-09 22:05:28] [ INFO ] [OdontologoDaoH2:93] <buscarPorId> - Se ha encontrado el odontologo 
+Id: 1 - Odontologo: 50 - MONICA - DIAZ
+[2023-08-09 22:05:28] [ INFO ] [OdontologoServiceTest:73] -----------------Fin Test-------------------------
+[2023-08-09 22:07:29] [ INFO ] [OdontologoServiceTest:27] Creación de la tabla ODONTOLOGOS
+[2023-08-09 22:07:29] [ INFO ] [OdontologoServiceTest:51] --------------------------------------------------
+[2023-08-09 22:07:29] [ INFO ] [OdontologoServiceTest:52]            Test: deberiaAgregarUnOdontologo       
+[2023-08-09 22:07:29] [ INFO ] [OdontologoServiceTest:53] --------------------------------------------------
+[2023-08-09 22:07:29] [ INFO ] [OdontologoDaoH2:36] <registrar> - Registros insertados - 1
+[2023-08-09 22:07:29] [ INFO ] [OdontologoDaoH2:45] <registrar> - Odontologo guardado: 
+Id: 5 - Odontologo: 50 - Pepito - Perez
+[2023-08-09 22:07:29] [ INFO ] [OdontologoServiceTest:58] -----------------Fin Test-------------------------
+[2023-08-09 22:08:05] [ INFO ] [OdontologoServiceTest:27] Creación de la tabla ODONTOLOGOS
+[2023-08-09 22:08:06] [ INFO ] [OdontologoServiceTest:63] --------------------------------------------------
+[2023-08-09 22:08:06] [ INFO ] [OdontologoServiceTest:64]     Test: deberiaEncontrarElOdontologoConId1      
+[2023-08-09 22:08:06] [ INFO ] [OdontologoServiceTest:65] --------------------------------------------------
+[2023-08-09 22:08:06] [ INFO ] [OdontologoDaoH2:83] <buscarPorId> - Sentencia SELECT <<prep0: SELECT * FROM ODONTOLOGOS WHERE ID = ? {1: 1}>>
+[2023-08-09 22:08:06] [ INFO ] [OdontologoDaoH2:93] <buscarPorId> - Se ha encontrado el odontologo 
+Id: 1 - Odontologo: 50 - MONICA - DIAZ
+[2023-08-09 22:08:06] [ INFO ] [OdontologoServiceTest:75] -----------------Fin Test-------------------------
+[2023-08-09 22:08:55] [ INFO ] [OdontologoServiceTest:27] Creación de la tabla ODONTOLOGOS
+[2023-08-09 22:08:55] [ INFO ] [OdontologoServiceTest:63] --------------------------------------------------
+[2023-08-09 22:08:55] [ INFO ] [OdontologoServiceTest:64]     Test: deberiaEncontrarElOdontologoConId1      
+[2023-08-09 22:08:55] [ INFO ] [OdontologoServiceTest:65] --------------------------------------------------
+[2023-08-09 22:08:56] [ INFO ] [OdontologoDaoH2:83] <buscarPorId> - Sentencia SELECT <<prep0: SELECT * FROM ODONTOLOGOS WHERE ID = ? {1: 2}>>
+[2023-08-09 22:08:56] [ INFO ] [OdontologoDaoH2:93] <buscarPorId> - Se ha encontrado el odontologo 
+Id: 2 - Odontologo: 20 - ALICIA - HERNANDEZ
+[2023-08-09 22:08:56] [ INFO ] [OdontologoServiceTest:75] -----------------Fin Test-------------------------
+[2023-08-09 22:09:22] [ INFO ] [OdontologoServiceTest:27] Creación de la tabla ODONTOLOGOS
+[2023-08-09 22:09:22] [ INFO ] [OdontologoServiceTest:63] --------------------------------------------------
+[2023-08-09 22:09:22] [ INFO ] [OdontologoServiceTest:64]     Test: deberiaEncontrarElOdontologoConId1      
+[2023-08-09 22:09:22] [ INFO ] [OdontologoServiceTest:65] --------------------------------------------------
+[2023-08-09 22:09:22] [ INFO ] [OdontologoDaoH2:83] <buscarPorId> - Sentencia SELECT <<prep0: SELECT * FROM ODONTOLOGOS WHERE ID = ? {1: 1}>>
+[2023-08-09 22:09:22] [ INFO ] [OdontologoDaoH2:93] <buscarPorId> - Se ha encontrado el odontologo 
+Id: 1 - Odontologo: 50 - MONICA - DIAZ
+[2023-08-09 22:09:22] [ INFO ] [OdontologoServiceTest:75] -----------------Fin Test-------------------------
+[2023-08-09 22:09:43] [ INFO ] [OdontologoServiceTest:27] Creación de la tabla ODONTOLOGOS
+[2023-08-09 22:09:44] [ INFO ] [OdontologoServiceTest:51] --------------------------------------------------
+[2023-08-09 22:09:44] [ INFO ] [OdontologoServiceTest:52]            Test: deberiaAgregarUnOdontologo       
+[2023-08-09 22:09:44] [ INFO ] [OdontologoServiceTest:53] --------------------------------------------------
+[2023-08-09 22:09:44] [ INFO ] [OdontologoDaoH2:36] <registrar> - Registros insertados - 1
+[2023-08-09 22:09:44] [ INFO ] [OdontologoDaoH2:45] <registrar> - Odontologo guardado: 
+Id: 5 - Odontologo: 50 - Pepito - Perez
+[2023-08-09 22:09:44] [ INFO ] [OdontologoServiceTest:58] -----------------Fin Test-------------------------
+[2023-08-09 22:15:37] [ INFO ] [OdontologoServiceTest:29] Creación de la tabla ODONTOLOGOS
+[2023-08-09 22:15:37] [ INFO ] [OdontologoServiceTest:102] --------------------------------------------------
+[2023-08-09 22:15:37] [ INFO ] [OdontologoServiceTest:103]    Test: deberiaHaberUnaListaNoVaciaMemoria       
+[2023-08-09 22:15:37] [ INFO ] [OdontologoServiceTest:104] --------------------------------------------------
+[2023-08-09 22:15:37] [ INFO ] [OdontologoDaoEnMemoria:26] Listado de todos los odontologos: 
+[]
+[2023-08-09 22:16:26] [ INFO ] [OdontologoServiceTest:29] Creación de la tabla ODONTOLOGOS
+[2023-08-09 22:16:26] [ INFO ] [OdontologoServiceTest:102] --------------------------------------------------
+[2023-08-09 22:16:26] [ INFO ] [OdontologoServiceTest:103]    Test: deberiaHaberUnaListaNoVaciaMemoria       
+[2023-08-09 22:16:26] [ INFO ] [OdontologoServiceTest:104] --------------------------------------------------
+[2023-08-09 22:16:26] [ INFO ] [OdontologoDaoEnMemoria:20] Odontologo guardada: 
+Id: 0 - Odontologo: 50 - Pepito - Perez
+[2023-08-09 22:16:26] [ INFO ] [OdontologoDaoEnMemoria:20] Odontologo guardada: 
+Id: 0 - Odontologo: 25 - Jacinto - Ramirez
+[2023-08-09 22:16:26] [ INFO ] [OdontologoDaoEnMemoria:26] Listado de todos los odontologos: 
+[
+Id: 0 - Odontologo: 50 - Pepito - Perez, 
+Id: 0 - Odontologo: 25 - Jacinto - Ramirez]
+[2023-08-09 22:16:26] [ INFO ] [OdontologoServiceTest:116] -----------------Fin Test-------------------------
+[2023-08-09 22:19:09] [ INFO ] [OdontologoServiceTest:29] Creación de la tabla ODONTOLOGOS
+[2023-08-09 22:19:09] [ INFO ] [OdontologoServiceTest:102] --------------------------------------------------
+[2023-08-09 22:19:09] [ INFO ] [OdontologoServiceTest:103]    Test: deberiaHaberUnaListaNoVaciaMemoria       
+[2023-08-09 22:19:09] [ INFO ] [OdontologoServiceTest:104] --------------------------------------------------
+[2023-08-09 22:19:09] [ INFO ] [OdontologoDaoEnMemoria:21] Odontologo guardada: 
+Id: 1 - Odontologo: 50 - Pepito - Perez
+[2023-08-09 22:19:09] [ INFO ] [OdontologoDaoEnMemoria:21] Odontologo guardada: 
+Id: 2 - Odontologo: 25 - Jacinto - Ramirez
+[2023-08-09 22:19:09] [ INFO ] [OdontologoDaoEnMemoria:27] Listado de todos los odontologos: 
+[
+Id: 1 - Odontologo: 50 - Pepito - Perez, 
+Id: 2 - Odontologo: 25 - Jacinto - Ramirez]
+[2023-08-09 22:19:09] [ INFO ] [OdontologoServiceTest:115] -----------------Fin Test-------------------------

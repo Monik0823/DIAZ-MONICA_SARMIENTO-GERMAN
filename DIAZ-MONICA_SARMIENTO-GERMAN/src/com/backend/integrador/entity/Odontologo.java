@@ -1,20 +1,20 @@
 package com.backend.integrador.entity;
 
-public class Entidad {
+public class Odontologo {
     //Propiedades
     private int id;
-    private String apellido;
-    private String nombre;
     private int matricula;
+    private String nombre;
+    private String apellido;
 
-    public Entidad(int id, String apellido, String nombre, int matricula) {
+    public Odontologo(int id, int matricula, String nombre, String apellido) {
         this.id = id;
         this.apellido = apellido;
         this.nombre = nombre;
         this.matricula = matricula;
     }
 
-    public Entidad(String apellido, String nombre, int matricula) {
+    public Odontologo(int matricula, String nombre, String apellido) {
         this.apellido = apellido;
         this.nombre = nombre;
         this.matricula = matricula;
@@ -53,6 +53,6 @@ public class Entidad {
 
     @Override
     public String toString() {
-        return "\nId: " + id + " - Entidad: " + apellido + " - " + nombre + " - Matricula: " + matricula;
+        return "\nId: " + id + " - Odontologo: " + matricula +  " - " + nombre + " - " + apellido;
     }
 }

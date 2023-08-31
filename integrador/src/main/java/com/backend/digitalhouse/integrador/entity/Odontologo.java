@@ -1,40 +1,41 @@
 package com.backend.digitalhouse.integrador.entity;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "ODONTOLOGOS")
 public class Odontologo {
-    private int id;
-    private String matricula;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private int matricula;
+
+    @Column(length = 50)
     private String nombre;
+
+    @Column(length = 50)
     private String apellido;
 
     public Odontologo() {
     }
 
-    public Odontologo(int id, String matricula, String nombre, String apellido) {
-        this.id = id;
+    public Odontologo(int matricula, String nombre, String apellido) {
         this.matricula = matricula;
         this.nombre = nombre;
         this.apellido = apellido;
     }
 
-    public Odontologo(String matricula, String nombre, String apellido) {
-        this.matricula = matricula;
-        this.nombre = nombre;
-        this.apellido = apellido;
-    }
-
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getMatricula() {
+    public int getMatricula() {
         return matricula;
     }
 
-    public void setMatricula(String matricula) {
+    public void setMatricula(int matricula) {
         this.matricula = matricula;
     }
 

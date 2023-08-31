@@ -1,10 +1,10 @@
 package com.backend.digitalhouse.integrador.service.impl;
 
-import com.backend.digitalhouse.integrador.dao.IDao;
 import com.backend.digitalhouse.integrador.dto.entrada.modificacion.PacienteModificacionEntradaDto;
 import com.backend.digitalhouse.integrador.dto.entrada.paciente.PacienteEntradaDto;
 import com.backend.digitalhouse.integrador.dto.salida.paciente.PacienteSalidaDto;
 import com.backend.digitalhouse.integrador.entity.Paciente;
+import com.backend.digitalhouse.integrador.repository.PacienteRepository;
 import com.backend.digitalhouse.integrador.service.IPacienteService;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
@@ -14,11 +14,11 @@ import java.util.List;
 
 @Service
 public class PacienteService implements IPacienteService {
-    private final IDao<Paciente> pacienteIDao;
+    private final PacienteRepository pacienteRepository;
     private final ModelMapper modelMapper;
 
-    public PacienteService(IDao<Paciente> pacienteIDao, ModelMapper modelMapper) {
-        this.pacienteIDao = pacienteIDao;
+    public PacienteService(PacienteRepository pacienteRepository, ModelMapper modelMapper) {
+        this.pacienteRepository = pacienteRepository;
         this.modelMapper = modelMapper;
         configureMapping();
     }
@@ -27,7 +27,7 @@ public class PacienteService implements IPacienteService {
     public PacienteSalidaDto registrarPaciente(PacienteEntradaDto paciente) {
         //convertir Dto de entrada a entidad para poder enviarlo a la capa de persistencia
         Paciente pacienteRecibido = dtoEntradaAEntidad(paciente);
-        Paciente pacienteRegistrado = pacienteIDao.registrar(pacienteRecibido);
+        Paciente pacienteRegistrado = pacienteRepository.registrar(pacienteRecibido);
 
         return entidadADtoSalida(pacienteRegistrado);
     }
@@ -35,11 +35,11 @@ public class PacienteService implements IPacienteService {
     @Override
     public PacienteSalidaDto modificarPaciente(PacienteModificacionEntradaDto pacienteModificado) {
         PacienteSalidaDto pacienteSalidaDto = null;
-        Paciente pacienteAModificar = pacienteIDao.buscarPorId(pacienteModificado.getId());
+        Paciente pacienteAModificar = pacienteRepository.buscarPorId(pacienteModificado.getId());
 
         if(pacienteAModificar != null){
             pacienteAModificar = dtoModificadoAEntidad(pacienteModificado);
-            pacienteSalidaDto = entidadADtoSalida(pacienteIDao.modificar(pacienteAModificar));
+            pacienteSalidaDto = entidadADtoSalida(pacienteRepository.modificar(pacienteAModificar));
 
         }
 
@@ -48,12 +48,12 @@ public class PacienteService implements IPacienteService {
 
     @Override
     public PacienteSalidaDto buscarPacientePorId(int id) {
-        return entidadADtoSalida(pacienteIDao.buscarPorId(id));
+        return entidadADtoSalida(pacienteRepository.buscarPorId(id));
     }
 
     @Override
     public List<PacienteSalidaDto> listarPacientes() {
-        List<Paciente> pacientes = pacienteIDao.listarTodos();
+        List<Paciente> pacientes = pacienteRepository.listarTodos();
 
         //List<PacienteSalidaDto> pacienteSalidaDtos = new ArrayList<>();
 
@@ -68,7 +68,7 @@ public class PacienteService implements IPacienteService {
 
     @Override
     public void eliminarPaciente(int id) {
-        pacienteIDao.eliminar(id);
+        pacienteRepository.eliminar(id);
 
     }
 

@@ -1,7 +1,5 @@
 package com.backend.digitalhouse.integrador;
 
-import com.backend.digitalhouse.integrador.dao.H2Connection;
-
 import java.sql.SQLException;
 
 import org.modelmapper.ModelMapper;
@@ -20,8 +18,7 @@ public class IntegradorApplication {
 
 	public static void main(String[] args) throws SQLException, ClassNotFoundException {
 		SpringApplication.run(IntegradorApplication.class, args);
-		H2Connection.create();
-		LOGGER.info("ClinicaOdontologica is now running...");
+		LOGGER.info("Integrador is now running...");
 	}
 
 	@Bean

@@ -3,7 +3,7 @@ package com.backend.digitalhouse.integrador.dto.salida.turno;
 import java.time.LocalDateTime;
 
 public class TurnoSalidaDto {
-    private int id;
+    private Long id;
     private PacienteTurnoSalidaDto pacienteTurnoSalidaDto;
     private OdontologoTurnoSalidaDto odontologoTurnoSalidaDto;
     private LocalDateTime fechaYHora;
@@ -11,18 +11,18 @@ public class TurnoSalidaDto {
     public TurnoSalidaDto() {
     }
 
-    public TurnoSalidaDto(int id, PacienteTurnoSalidaDto pacienteTurnoSalidaDto, OdontologoTurnoSalidaDto odontologoTurnoSalidaDto, LocalDateTime fechaYHora) {
+    public TurnoSalidaDto(Long id, PacienteTurnoSalidaDto pacienteTurnoSalidaDto, OdontologoTurnoSalidaDto odontologoTurnoSalidaDto, LocalDateTime fechaYHora) {
         this.id = id;
         this.pacienteTurnoSalidaDto = pacienteTurnoSalidaDto;
         this.odontologoTurnoSalidaDto = odontologoTurnoSalidaDto;
         this.fechaYHora = fechaYHora;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

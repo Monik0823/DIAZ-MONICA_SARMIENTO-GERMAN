@@ -1,8 +1,6 @@
 package com.backend.digitalhouse.integrador.dto.salida.turno;
 
 public class OdontologoTurnoSalidaDto {
-
-
     private Long id;
     private String nombre;
     private String apellido;
@@ -38,6 +36,16 @@ public class OdontologoTurnoSalidaDto {
 
     public void setApellido(String apellido) {
         this.apellido = apellido;
+    }
+
+    @Override
+    public String toString(){
+        return  "\n" + "{" + "\n" +
+                "  Id: " + this.id + "\n" +
+                "  Nombre: " + this.nombre + "\n" +
+                "  Apellido: " + this.apellido + "\n" +
+                "}"
+                ;
     }
 }
 

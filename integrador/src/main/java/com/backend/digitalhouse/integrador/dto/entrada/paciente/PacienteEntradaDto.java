@@ -3,6 +3,7 @@ package com.backend.digitalhouse.integrador.dto.entrada.paciente;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import javax.validation.Valid;
 import javax.validation.constraints.*;
 import java.time.LocalDate;
 
@@ -19,8 +20,7 @@ public class PacienteEntradaDto {
     @NotBlank(message = "Debe especificarse el apellido del paciente")
     private String apellido;
 
-    @Pattern(regexp = "\\d+", message = "El campo dni sólo admite caracteres numéricos")
-    @NotBlank(message = "Debe especificarse el dni del paciente")
+    @NotNull(message = "DNI no puede ser null")
     private int dni;
 
     //@JsonProperty("fechaingreso") - en caso que el campo a mapear este escrito distinto a nuestro modelo
@@ -31,6 +31,7 @@ public class PacienteEntradaDto {
 
 
     @NotNull(message = "El domicilio del paciente no puede ser nulo")
+    @Valid
     private DomicilioEntradaDto domicilio;
 
     public PacienteEntradaDto() {

@@ -48,5 +48,16 @@ public class OdontologoSalidaDto {
     public void setApellido(String apellido) {
         this.apellido = apellido;
     }
+
+    @Override
+    public String toString(){
+        return  "\n" + "{" + "\n" +
+                "  Id: " + this.id + "\n" +
+                "  Matricula: " + this.matricula + "\n" +
+                "  Nombre: " + this.nombre + "\n" +
+                "  Apellido: " + this.apellido + "\n" +
+                "}"
+                ;
+    }
 }
 

@@ -3,7 +3,9 @@ package com.backend.digitalhouse.integrador.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "ODONTOLOGOS")
+@Table(name = "ODONTOLOGOS", uniqueConstraints = {
+    @UniqueConstraint(columnNames = {"matricula"})
+})
 public class Odontologo {
 
     @Id

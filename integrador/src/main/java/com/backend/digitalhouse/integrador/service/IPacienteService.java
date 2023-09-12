@@ -3,6 +3,7 @@ package com.backend.digitalhouse.integrador.service;
 import com.backend.digitalhouse.integrador.dto.entrada.modificacion.PacienteModificacionEntradaDto;
 import com.backend.digitalhouse.integrador.dto.entrada.paciente.PacienteEntradaDto;
 import com.backend.digitalhouse.integrador.dto.salida.paciente.PacienteSalidaDto;
+import com.backend.digitalhouse.integrador.exceptions.ResourceNotFoundException;
 
 import java.util.List;
 
@@ -13,9 +14,7 @@ public interface IPacienteService {
 
     PacienteSalidaDto buscarPacientePorId(Long id);
 
-    void eliminarPaciente(Long id);
+    void eliminarPaciente(Long id) throws ResourceNotFoundException;
 
-    PacienteSalidaDto actualizarPaciente(PacienteModificacionEntradaDto pacienteModificado);
-
-
+    PacienteSalidaDto actualizarPaciente(PacienteModificacionEntradaDto pacienteModificado) throws ResourceNotFoundException;
 }

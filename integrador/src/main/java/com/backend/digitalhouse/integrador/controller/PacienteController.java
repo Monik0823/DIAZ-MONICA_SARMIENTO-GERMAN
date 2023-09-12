@@ -3,6 +3,7 @@ package com.backend.digitalhouse.integrador.controller;
 import com.backend.digitalhouse.integrador.dto.entrada.modificacion.PacienteModificacionEntradaDto;
 import com.backend.digitalhouse.integrador.dto.entrada.paciente.PacienteEntradaDto;
 import com.backend.digitalhouse.integrador.dto.salida.paciente.PacienteSalidaDto;
+import com.backend.digitalhouse.integrador.exceptions.ResourceNotFoundException;
 import com.backend.digitalhouse.integrador.service.IPacienteService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/pacientes")
@@ -31,7 +34,7 @@ public class PacienteController {
 
     //PUT
     @PutMapping("actualizar")
-    public ResponseEntity<PacienteSalidaDto> actualizarPaciente(@Valid @RequestBody PacienteModificacionEntradaDto paciente) {
+    public ResponseEntity<PacienteSalidaDto> actualizarPaciente(@Valid @RequestBody PacienteModificacionEntradaDto paciente) throws ResourceNotFoundException {
         return new ResponseEntity<>(pacienteService.actualizarPaciente(paciente), HttpStatus.OK);
     }
 
@@ -48,9 +51,14 @@ public class PacienteController {
 
     //DELETE
     @DeleteMapping("eliminar/{id}")
-    public ResponseEntity<?> eliminarPaciente(@PathVariable Long id){
+    public ResponseEntity<?> eliminarPaciente(@PathVariable Long id) throws ResourceNotFoundException{
         pacienteService.eliminarPaciente(id);
-        return new ResponseEntity<>("Paciente eliminado correctamente", HttpStatus.NO_CONTENT);
+
+        Map<String, String> message = new HashMap<>();
+        message.put("message", "Paciente eliminado correctamente");
+
+        //Cambiamos el codigo Http devuelto de 204 a 200 para que al cliente llegue el mensaje que estamos enviado.
+        return new ResponseEntity<>(message, HttpStatus.OK);
     }
 
 }

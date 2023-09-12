@@ -59,4 +59,16 @@ public class DomicilioSalidaDto {
     public void setProvincia(String provincia) {
         this.provincia = provincia;
     }
+
+    @Override
+    public String toString(){
+        return  "\n" + "{" + "\n" +
+                "  Id: " + this.id + "\n" +
+                "  Calle: " + this.calle + "\n" +
+                "  Número: " + this.numero + "\n" +
+                "  Localidad: " + this.localidad + "\n" +
+                "  Provincia: " + this.provincia + "\n" +
+                "}"
+                ;
+    }
 }

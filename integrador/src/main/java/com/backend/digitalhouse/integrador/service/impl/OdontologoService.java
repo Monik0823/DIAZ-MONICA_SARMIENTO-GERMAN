@@ -70,20 +70,24 @@ public class OdontologoService implements IOdontologoService {
     }
 
     @Override
-    public OdontologoSalidaDto actualizarOdontologo(OdontologoModificacionEntradaDto odontologoModificacionEntradaDto){
+    public OdontologoSalidaDto actualizarOdontologo(OdontologoModificacionEntradaDto odontologoModificacionEntradaDto) throws ResourceNotFoundException{
         Odontologo odontologoConDatosNuevos = modelMapper.map(odontologoModificacionEntradaDto, Odontologo.class);
-        Odontologo odontologoActual = odontologoRepository.findById(odontologoConDatosNuevos.getId()).orElse(null);
+
+        Long idAModificar = odontologoConDatosNuevos.getId();
+
+        Odontologo odontologoActual = odontologoRepository.findById(idAModificar).orElse(null);
         OdontologoSalidaDto odontologoSalidaDto = null;
 
         if (odontologoActual != null){
-            odontologoActual = odontologoConDatosNuevos;
-            odontologoRepository.save(odontologoActual);
+            odontologoRepository.save(odontologoConDatosNuevos);
 
             odontologoSalidaDto = modelMapper.map(odontologoActual, OdontologoSalidaDto.class);
             LOGGER.warn("Odontologo actualizado: {}", odontologoSalidaDto);
         }
         else {
-            LOGGER.error("No fue posible actualizar el odontologo con id: {}, por que no existe", odontologoConDatosNuevos.getId());
+            String mensaje = "No fue posible actualizar el odontologo con id: " + idAModificar + ", por que no existe";
+            LOGGER.error(mensaje);
+            throw new ResourceNotFoundException(mensaje);
         }
         return odontologoSalidaDto;
     }

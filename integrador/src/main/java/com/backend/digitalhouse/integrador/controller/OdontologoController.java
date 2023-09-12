@@ -33,7 +33,7 @@ public class OdontologoController {
 
     //PUT
     @PutMapping("actualizar")
-    public ResponseEntity<OdontologoSalidaDto> actualizarOdontologo(@Valid @RequestBody OdontologoModificacionEntradaDto odontologo) {
+    public ResponseEntity<OdontologoSalidaDto> actualizarOdontologo(@Valid @RequestBody OdontologoModificacionEntradaDto odontologo) throws ResourceNotFoundException{
         return new ResponseEntity<>(odontologoService.actualizarOdontologo(odontologo), HttpStatus.OK);
     }
 
@@ -50,15 +50,13 @@ public class OdontologoController {
 
     //DELETE
     @DeleteMapping("eliminar/{id}")
-    public ResponseEntity<Map<String, String>> eliminarOdontologo(@PathVariable Long id) throws ResourceNotFoundException {
+    public ResponseEntity<?> eliminarOdontologo(@PathVariable Long id) throws ResourceNotFoundException {
         odontologoService.eliminarOdontologo(id);
 
         Map<String, String> message = new HashMap<>();
         message.put("message", "Odontologo eliminado correctamente");
 
-        return new ResponseEntity<>(message, HttpStatus.NO_CONTENT);
-
-
-        //return new ResponseEntity<>("Odontologo eliminado correctamente", HttpStatus.NO_CONTENT);
+        //Cambiamos el codigo Http devuelto de 204 a 200 para que al cliente llegue el mensaje que estamos enviado.
+        return new ResponseEntity<>(message, HttpStatus.OK);
     }
 }

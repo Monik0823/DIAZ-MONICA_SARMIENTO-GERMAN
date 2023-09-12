@@ -10,8 +10,8 @@ import javax.validation.constraints.Size;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class OdontologoEntradaDto {
 
+
     @NotNull(message = "La matricula no puede ser nula")
-    @NotBlank(message = "Debe especificarse la matricula del odontologo")
     private int matricula;
 
     @Size(max = 50, message = "El nombre debe tener hasta 50 caracteres")

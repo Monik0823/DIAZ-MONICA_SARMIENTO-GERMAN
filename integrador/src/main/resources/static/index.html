@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clinica del orto</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <script src="./scripts/code.js"></script>
+</head>
+<body>
+    <div id="sitio">
+        <!---------------------------------- parte 1 ------------------------------- -->
+        <div id="entidades-header" class="partes">
+            <button id="odontologo-entidad">Odontologos</button>
+            <button id="paciente-entidad">Pacientes</button>
+            <button id="turno-entidad">Turnos</button>
+        </div>
+        <hr/>
+        <!---------------------------------- parte 2 ------------------------------- -->
+        <div id="entidad-actual-label" class="partes">
+            <h3>Odontologos</h3>
+        </div>
+        <hr/>
+        <!---------------------------------- parte 3 ------------------------------- -->
+        <div id="entidades-opciones" class="partes">
+            <button id="listar-todos-button">Listar todos</button>
+            <button id="consultar-id-button">Consultar por ID</button>
+            <button id="registrar-button">Registrar</button>
+            <button id="actualizar-button">Actualizar</button>
+            <button id="eliminar-button">Eliminar</button>
+        </div>
+        <hr/>
+        <!---------------------------------- parte 4 ------------------------------- -->
+        <div id="odontologo-div-listar" class="partes">
+            <table  class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Matrícula</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                    </tr>
+                    <tbody id="odontologo-tabla-listar">
+
+                    </tbody>
+                </thead>
+            </table>
+        </div>
+
+        <div id="odontologo-div-consultar" class="partes">
+            <form id="odontologo-form-consultar-id">
+                <label for="odontologo-form-consultar-id-id">Id</label>
+                <input id="odontologo-form-consultar-id-id" type="number" name="odontologo-id">
+            </form>
+            <table  class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Matrícula</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                    </tr>
+                    <tbody id="odontologo-tabla-id">
+
+                    </tbody>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>

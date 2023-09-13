@@ -1,0 +1,88 @@
+/*Globales*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+  }
+
+  :root {
+    --card-bg: #cb1e41bd;
+    --shadow: 2px 5px 5px darkgray;
+    --white: whitesmoke;
+    --border-gray: 2px solid darkgray;
+  }
+
+  #sitio{
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .partes {
+    margin: 1rem;
+  }
+
+  .oculto{
+    visibility: hidden;
+  }
+  
+/*Estilos para titulos*/
+  h3 {
+    margin: 0.5rem auto;
+    width: 50%;
+    text-align: center;
+  }
+
+/*Estilos para botones*/
+  button {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--card-bg);
+    color: var(--white);
+    font-weight: bold;
+    box-shadow: var(--shadow);
+    transition: box-shadow 0.5s;
+  }
+  
+  button:hover {
+    cursor: pointer;
+    box-shadow: none;
+    transition: box-shadow 0.5s;
+  }
+/*Estilos para tablas*/
+table {
+    color: #fff;
+    font-size: 14px;
+    table-layout: fixed;
+    border-collapse: collapse;
+    background: linear-gradient(#e752b8, #ac18c0)
+}
+
+thead {
+    background: rgba(243, 140, 210, 0.4);
+}
+
+th {
+    padding: 20px 15px ;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 15px;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+}
+
+tbody tr:hover {
+    background: rgba(243, 103, 199, 0.4);
+}
+
+#odontologo-div-listar{
+    display: flex;
+    justify-content: center;
+}

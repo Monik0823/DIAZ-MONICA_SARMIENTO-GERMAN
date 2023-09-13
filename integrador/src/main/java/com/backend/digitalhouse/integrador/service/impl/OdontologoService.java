@@ -34,7 +34,7 @@ public class OdontologoService implements IOdontologoService {
     }
 
     @Override
-    public OdontologoSalidaDto buscarOdontologoPorId(Long id) {
+    public OdontologoSalidaDto buscarOdontologoPorId(Long id) throws  ResourceNotFoundException{
         Odontologo odontologo = odontologoRepository.findById(id).orElse(null);
 
         OdontologoSalidaDto odontologoSalidaDto = null;
@@ -43,7 +43,9 @@ public class OdontologoService implements IOdontologoService {
             LOGGER.info("Odontologo encontrado por id: {}", odontologoSalidaDto);
         }
         else {
-            LOGGER.error("El odontologo por id : {} , no se ha encontrado en la base de datos", id);
+            String mensaje = "El odontologo por id : " + id + " , no se ha encontrado en la base de datos";
+            LOGGER.error(mensaje);
+            throw new ResourceNotFoundException(mensaje);
         }
         return odontologoSalidaDto;
     }

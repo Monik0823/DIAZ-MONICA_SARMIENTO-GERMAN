@@ -49,7 +49,7 @@ public class TurnoService implements ITurnoService {
     }
 
     @Override
-    public TurnoSalidaDto registrarTurno(TurnoEntradaDto turnoEntradaDto) throws BadRequestException{
+    public TurnoSalidaDto registrarTurno(TurnoEntradaDto turnoEntradaDto) throws BadRequestException, ResourceNotFoundException{
         TurnoSalidaDto turnoSalidaDto = null;
 
         PacienteSalidaDto pacienteSalidaDto = pacienteService.buscarPacientePorId(turnoEntradaDto.getPacienteId());
@@ -81,7 +81,7 @@ public class TurnoService implements ITurnoService {
     }
 
     @Override
-    public TurnoSalidaDto buscarTurnoPorId(Long id) {
+    public TurnoSalidaDto buscarTurnoPorId(Long id) throws ResourceNotFoundException{
         Turno turno = turnoRepository.findById(id).orElse(null);
 
         TurnoSalidaDto turnoSalidaDto = null;
@@ -91,6 +91,7 @@ public class TurnoService implements ITurnoService {
         }
         else {
             LOGGER.error("El turno por id : {} , no se ha encontrado en la base de datos", id);
+            throw new ResourceNotFoundException("No se ha encontrado el turno con id: " + id);
         }
         return turnoSalidaDto;
     }
@@ -137,7 +138,7 @@ public class TurnoService implements ITurnoService {
         return turnoSalidaDto;
     }
 
-    private boolean esValidoTurnoModificacionEntradaDto(TurnoModificacionEntradaDto turnoModificacionEntradaDto){
+    private boolean esValidoTurnoModificacionEntradaDto(TurnoModificacionEntradaDto turnoModificacionEntradaDto) throws ResourceNotFoundException{
         Long turnoId = turnoModificacionEntradaDto.getId();
         Long pacienteId = turnoModificacionEntradaDto.getPacienteId();
         Long odontologoId = turnoModificacionEntradaDto.getOdontologoId();

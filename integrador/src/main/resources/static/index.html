@@ -20,8 +20,8 @@
         </div>
         <hr/>
         <!---------------------------------- parte 2 ------------------------------- -->
-        <div id="entidad-actual-label" class="partes">
-            <h3>Odontologos</h3>
+        <div class="partes">
+            <h3 id="entidad-actual-label">Odontologo</h3>
         </div>
         <hr/>
         <!---------------------------------- parte 3 ------------------------------- -->
@@ -34,7 +34,8 @@
         </div>
         <hr/>
         <!---------------------------------- parte 4 ------------------------------- -->
-        <div id="odontologo-div-listar" class="partes">
+        <!--Odontologos-->
+        <div id="odontologo-div-listar" class="partes contenidos">
             <table  class="table">
                 <thead>
                     <tr>
@@ -50,10 +51,10 @@
             </table>
         </div>
 
-        <div id="odontologo-div-consultar" class="partes">
+        <div id="odontologo-div-consultar" class="partes contenidos">
             <form id="odontologo-form-consultar-id">
-                <label for="odontologo-form-consultar-id-id">Id</label>
-                <input id="odontologo-form-consultar-id-id" type="number" name="odontologo-id">
+                <input id="odontologo-form-consultar-id-id" type="number" name="odontologo-id" placeholder="ID Odontologo">
+                <button id="odontologo-form-consultar-id-button" name="consultar" type="submit" class="btn">Consultar</button>
             </form>
             <table  class="table">
                 <thead>
@@ -69,7 +70,196 @@
                 </thead>
             </table>
         </div>
-    </div>
 
+        <div id="odontologo-div-registrar" class="partes contenidos">
+            <form id="odontologo-form-registrar">
+                <input id="odontologo-form-registrar-matricula" type="number" name="odontologo-matricula" placeholder="No. Matrícula">
+                <input id="odontologo-form-registrar-nombre" type="text" name="odontologo-nombre" maxlength="50" placeholder="Nombre">
+                <input id="odontologo-form-registrar-apellido" type="text" name="odontologo-apellid" maxlength="50" placeholder="Apellido">
+                <button id="odontologo-form-registrar-button" name="guardar" type="submit" class="btn">Guardar</button>
+            </form>
+            <span id="odontologo-span-registrar"></span>
+        </div>
+
+        <div id="odontologo-div-actualizar" class="partes contenidos">
+            <form id="odontologo-form-actualizar">
+                <input id="odontologo-form-actualizar-id" type="number" name="odontologo-id" placeholder="ID Odontologo">
+                <input id="odontologo-form-actualizar-matricula" type="number" name="odontologo-matricula" placeholder="No. Matrícula">
+                <input id="odontologo-form-actualizar-nombre" type="text" name="odontologo-nombre" maxlength="50" placeholder="Nombre">
+                <input id="odontologo-form-actualizar-apellido" type="text" name="odontologo-apellid" maxlength="50" placeholder="Apellido">
+                <button id="odontologo-form-actualizar-button" name="actualizar" type="submit" class="btn">Actualizar</button>
+            </form>
+            <span id="odontologo-span-actualizar"></span>
+        </div>
+
+        <div id="odontologo-div-eliminar" class="partes contenidos">
+            <form id="odontologo-form-eliminar">
+                <input id="odontologo-form-eliminar-id" type="number" name="odontologo-id" placeholder="ID Odontologo">
+                <button id="odontologo-form-eliminar-button" name="eliminar" type="submit" class="btn">Eliminar</button>
+            </form>
+            <span id="odontologo-span-eliminar"></span>
+        </div>
+
+        <!--Pacientes-->
+        <div id="paciente-div-listar" class="partes contenidos">
+            <table  class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>DNI</th>
+                        <th>Fecha ingreso</th>
+                        <th>Calle</th>
+                        <th>Numero</th>
+                        <th>Localidad</th>
+                        <th>Provincia</th>
+                    </tr>
+                    <tbody id="paciente-tabla-listar">
+
+                    </tbody>
+                </thead>
+            </table>
+        </div>
+
+        <div id="paciente-div-consultar" class="partes contenidos">
+            <form id="paciente-form-consultar-id">
+                <input id="paciente-form-consultar-id-id" type="number" name="paciente-id" placeholder="ID">
+                <button id="paciente-form-consultar-id-button" name="consultar" type="submit" class="btn">Consultar</button>
+            </form>
+            <table  class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>DNI</th>
+                        <th>Fecha ingreso</th>
+                        <th>Calle</th>
+                        <th>Numero</th>
+                        <th>Localidad</th>
+                        <th>Provincia</th>
+                    </tr>
+                    <tbody id="paciente-tabla-id">
+
+                    </tbody>
+                </thead>
+            </table>
+        </div>
+
+        <div id="paciente-div-registrar" class="partes contenidos">
+            <form id="paciente-form-registrar">
+                <input id="paciente-form-registrar-nombre" type="text" name="paciente-nombre" maxlength="50" placeholder="Nombre">
+                <input id="paciente-form-registrar-apellido" type="text" name="paciente-apellido" maxlength="50" placeholder="Apellido">
+                <input id="paciente-form-registrar-dni" type="number" name="paciente-dni"  placeholder="DNI">
+                <input id="paciente-form-registrar-fecha" type="date" name="paciente-fecha" placeholder="Fecha de ingreso">
+                <input id="paciente-form-registrar-calle" type="text" name="paciente-calle" maxlength="50" placeholder="Calle">
+                <input id="paciente-form-registrar-numero" type="number" name="paciente-numero" placeholder="Número">
+                <input id="paciente-form-registrar-localidad" type="text" name="paciente-localidad" maxlength="50" placeholder="Localidad">
+                <input id="paciente-form-registrar-provincia" type="text" name="paciente-provincia" maxlength="50" placeholder="Provincia">
+                <button id="paciente-form-registrar-button" name="guardar" type="submit" class="btn">Guardar</button>
+            </form>
+            <span id="paciente-span-registrar"></span>
+        </div>
+
+        <div id="paciente-div-actualizar" class="partes contenidos">
+            <form id="paciente-form-actualizar">
+                <input id="paciente-form-actualizar-id" type="number" name="paciente-id"  placeholder="ID paciente">
+                <input id="paciente-form-actualizar-nombre" type="text" name="paciente-nombre" maxlength="50" placeholder="Nombre">
+                <input id="paciente-form-actualizar-apellido" type="text" name="paciente-apellido" maxlength="50" placeholder="Apellido">
+                <input id="paciente-form-actualizar-dni" type="number" name="paciente-dni"  placeholder="DNI">
+                <input id="paciente-form-actualizar-fecha" type="date" name="paciente-fecha" placeholder="Fecha de ingreso">
+                <input id="paciente-form-actualizar-idd" type="number" name="paciente-idd"  placeholder="ID domicilio">
+                <input id="paciente-form-actualizar-calle" type="text" name="paciente-calle" maxlength="50" placeholder="Calle">
+                <input id="paciente-form-actualizar-numero" type="number" name="paciente-numero" placeholder="Número">
+                <input id="paciente-form-actualizar-localidad" type="text" name="paciente-localidad" maxlength="50" placeholder="Localidad">
+                <input id="paciente-form-actualizar-provincia" type="text" name="paciente-provincia" maxlength="50" placeholder="Provincia">
+                <button id="paciente-form-actualizar-button" name="actualizar" type="submit" class="btn">Actualizar</button>
+            </form>
+            <span id="paciente-span-actualizar"></span>
+        </div>
+
+        <div id="paciente-div-eliminar" class="partes contenidos">
+            <form id="paciente-form-eliminar">
+                <input id="paciente-form-eliminar-id" type="number" name="paciente-id" placeholder="ID Paciente">
+                <button id="paciente-form-eliminar-button" name="eliminar" type="submit" class="btn">Eliminar</button>
+            </form>
+            <span id="paciente-span-eliminar"></span>
+        </div>
+
+        <!--Turnos-->
+        <div id="turno-div-listar" class="partes contenidos">
+            <table  class="table">
+                <thead>
+                    <tr>
+                        <th>Id turno</th>
+                        <th>Id paciente</th>
+                        <th>Nombre paciente</th>
+                        <th>Apellido paciente</th>
+                        <th>Id Odontologo</th>
+                        <th>Nombre Odontologo</th>
+                        <th>Apellido Odontologo</th>
+                        <th>Fecha y hora</th>
+                    </tr>
+                    <tbody id="turno-tabla-listar">
+
+                    </tbody>
+                </thead>
+            </table>
+        </div>
+
+        <div id="turno-div-consultar" class="partes contenidos">
+            <form id="turno-form-consultar-id">
+                <input id="turno-form-consultar-id-id" type="number" name="turno-id" placeholder="ID turno">
+                <button id="turno-form-consultar-id-button" name="consultar" type="submit" class="btn">Consultar</button>
+            </form>
+            <table  class="table">
+                <thead>
+                    <tr>
+                        <th>Id turno</th>
+                        <th>Id paciente</th>
+                        <th>Nombre paciente</th>
+                        <th>Apellido paciente</th>
+                        <th>Id Odontologo</th>
+                        <th>Nombre Odontologo</th>
+                        <th>Apellido Odontologo</th>
+                        <th>Fecha y hora</th>
+                    </tr>
+                    <tbody id="turno-tabla-id">
+
+                    </tbody>
+                </thead>
+            </table>
+        </div>
+
+        <div id="turno-div-registrar" class="partes contenidos">
+            <form id="turno-form-registrar">
+                <input id="turno-form-registrar-id-paciente" type="number" name="turno-id-paciente" placeholder="Id Paciente">
+                <input id="turno-form-registrar-id-odontologo" type="number" name="turno-id-odontologo" placeholder="Id Odontologo">
+                <input id="turno-form-registrar-fecha-hora" type="datetime-local" name="turno-fecha-hora" placeholder="Fecha y hora">
+                <button id="turno-form-registrar-button" name="guardar" type="submit" class="btn">Guardar</button>
+            </form>
+            <span id="turno-span-registrar"></span>
+        </div>
+
+        <div id="turno-div-actualizar" class="partes contenidos">
+            <form id="turno-form-actualizar">
+                <input id="turno-form-actualizar-id-turno" type="number" name="turno-id-turno" placeholder="Id Turno">
+                <input id="turno-form-actualizar-id-paciente" type="number" name="turno-id-paciente" placeholder="Id Paciente">
+                <input id="turno-form-actualizar-id-odontologo" type="number" name="turno-id-odontologo" placeholder="Id Odontologo">
+                <input id="turno-form-actualizar-fecha-hora" type="datetime-local" name="turno-fecha-hora" placeholder="Fecha y hora">
+                <button id="turno-form-actualizar-button" name="actualizar" type="submit" class="btn">Actualizar</button>
+            </form>
+            <span id="turno-span-actualizar"></span>
+        </div>
+
+        <div id="turno-div-eliminar" class="partes contenidos">
+            <form id="turno-form-eliminar">
+                <input id="turno-form-eliminar-id-turno" type="number" name="turno-id-turno" placeholder="Id Turno">
+                <button id="turno-form-eliminar-button" name="eliminar" type="submit" class="btn">Eliminar</button>
+            </form>
+            <span id="turno-span-eliminar"></span>
+        </div>
+    </div>
 </body>
 </html>

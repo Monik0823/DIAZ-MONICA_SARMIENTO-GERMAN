@@ -7,6 +7,7 @@ import com.backend.digitalhouse.integrador.exceptions.ResourceNotFoundException;
 import com.backend.digitalhouse.integrador.service.impl.OdontologoService;
 import com.fasterxml.jackson.databind.util.JSONPObject;
 import org.h2.util.json.JSONObject;
+import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,8 +17,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@RestController
 @CrossOrigin
+@RestController
 @RequestMapping("/odontologos")
 public class OdontologoController {
     private final OdontologoService odontologoService;
@@ -40,7 +41,7 @@ public class OdontologoController {
 
     //GET
     @GetMapping("{id}")
-    public ResponseEntity<OdontologoSalidaDto> obtenerOdontologoPorId(@PathVariable Long id) {
+    public ResponseEntity<OdontologoSalidaDto> obtenerOdontologoPorId(@PathVariable Long id) throws ResourceNotFoundException{
         return new ResponseEntity<>(odontologoService.buscarOdontologoPorId(id), HttpStatus.OK);
     }
 

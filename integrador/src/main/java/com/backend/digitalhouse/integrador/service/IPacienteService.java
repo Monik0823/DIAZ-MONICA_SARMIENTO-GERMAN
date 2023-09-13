@@ -12,7 +12,7 @@ public interface IPacienteService {
 
     PacienteSalidaDto registrarPaciente(PacienteEntradaDto paciente);
 
-    PacienteSalidaDto buscarPacientePorId(Long id);
+    PacienteSalidaDto buscarPacientePorId(Long id) throws ResourceNotFoundException;
 
     void eliminarPaciente(Long id) throws ResourceNotFoundException;
 

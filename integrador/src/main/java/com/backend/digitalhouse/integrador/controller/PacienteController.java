@@ -16,6 +16,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/pacientes")
 public class PacienteController {
@@ -40,7 +41,7 @@ public class PacienteController {
 
     //GET
     @GetMapping("{id}")
-    public ResponseEntity<PacienteSalidaDto> obtenerPacientePorId(@PathVariable Long id){
+    public ResponseEntity<PacienteSalidaDto> obtenerPacientePorId(@PathVariable Long id) throws ResourceNotFoundException{
         return new ResponseEntity<>(pacienteService.buscarPacientePorId(id), HttpStatus.OK);
     }
 

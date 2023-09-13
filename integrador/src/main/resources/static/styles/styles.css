@@ -1,4 +1,6 @@
 /*Globales*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400);
+
 * {
     margin: 0;
     padding: 0;
@@ -22,14 +24,20 @@
     align-content: center;
   }
 
+  .contenidos{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
   .partes {
     margin: 1rem;
   }
 
   .oculto{
-    visibility: hidden;
+    display: none;
   }
-  
+
+
 /*Estilos para titulos*/
   h3 {
     margin: 0.5rem auto;
@@ -60,7 +68,8 @@ table {
     font-size: 14px;
     table-layout: fixed;
     border-collapse: collapse;
-    background: linear-gradient(#e752b8, #ac18c0)
+    background: linear-gradient(#e752b8, #ac18c0);
+    margin: 1em;
 }
 
 thead {
@@ -82,7 +91,41 @@ tbody tr:hover {
     background: rgba(243, 103, 199, 0.4);
 }
 
-#odontologo-div-listar{
-    display: flex;
-    justify-content: center;
-}
+/*Estilos para forms*/
+form{
+    padding: 60px;
+    max-width: 400px;
+    background-color: #f6e2f7;
+    margin: 0 auto;
+    border-radius: 5%;
+    text-align: left;
+  }
+  
+  form input, form textarea{
+    margin-bottom: 15px;
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box; 
+    border: none; 
+    color: #525c66; 
+    font-size: 1em;
+    resize: none; 
+  }
+
+  form input::-webkit-input-placeholder{
+    text-align: center;
+  }
+  
+  form button {
+      display: block;
+      background-color: #b000eb;
+      padding: 10px 45px 10px 45px;
+      border: 0;
+      font-size: 1em; 
+      color: 	white;
+    font-family: "Roboto", sans-serif;
+  }
+  form button:hover{
+      background-color: #5c0493;
+  }

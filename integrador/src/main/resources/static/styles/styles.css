@@ -68,7 +68,7 @@ table {
     font-size: 14px;
     table-layout: fixed;
     border-collapse: collapse;
-    background: linear-gradient(#e752b8, #ac18c0);
+    background: linear-gradient(#9e1c3a, #681373);
     margin: 1em;
 }
 
@@ -128,4 +128,10 @@ form{
   }
   form button:hover{
       background-color: #5c0493;
+  }
+
+  footer{
+    color: 	white;
+    background-color: #5c0493;
+    padding: 0.5em;
   }

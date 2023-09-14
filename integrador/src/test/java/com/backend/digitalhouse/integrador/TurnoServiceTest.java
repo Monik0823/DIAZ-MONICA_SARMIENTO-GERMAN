@@ -55,15 +55,15 @@ class TurnoServiceTest {
     @Test
     @Order(2)
     void deberiaRetornarUnaListaNoVaciaDeTurnos() throws BadRequestException, ResourceNotFoundException{
-        DomicilioEntradaDto domicilioEntradaDto = new DomicilioEntradaDto("SanJuan", 26, "Medellin", "Antioquia");
+        DomicilioEntradaDto domicilioEntradaDto = new DomicilioEntradaDto("San Antonio", 36, "Sabaneta", "Antioquia");
 
-        PacienteEntradaDto pacienteEntradaDto = new PacienteEntradaDto("Maria", "Moreno", 89546, LocalDate.of(2020, 12, 31), domicilioEntradaDto);
+        PacienteEntradaDto pacienteEntradaDto = new PacienteEntradaDto("Gloria", "Moreno", 215739, LocalDate.of(2020, 12, 29), domicilioEntradaDto);
         pacienteService.registrarPaciente(pacienteEntradaDto);
 
-        OdontologoEntradaDto odontologoEntradaDto = new OdontologoEntradaDto(12354, "Antonio", "Sarmiento");
+        OdontologoEntradaDto odontologoEntradaDto = new OdontologoEntradaDto(8358, "Mario", "Moreno");
         odontologoService.registrarOdontologo(odontologoEntradaDto);
 
-        TurnoEntradaDto turnoEntradaDto = new TurnoEntradaDto(1L,1L, LocalDateTime.of(2023,9,26,9,3,0));
+        TurnoEntradaDto turnoEntradaDto = new TurnoEntradaDto(1L,1L, LocalDateTime.of(2023,10,26,9,3,0));
         TurnoSalidaDto turnoSalidaDto = turnoService.registrarTurno(turnoEntradaDto);
 
         assertTrue(turnoService.listarTurnos().size() > 0);
@@ -72,15 +72,15 @@ class TurnoServiceTest {
     @Test
     @Order(3)
     void alIntentarEliminarUnTurnoYaEliminado_deberiaLanzarseUnResourceNotFoundException() throws BadRequestException, ResourceNotFoundException{
-        DomicilioEntradaDto domicilioEntradaDto = new DomicilioEntradaDto("SanJuan", 26, "Medellin", "Antioquia");
+        DomicilioEntradaDto domicilioEntradaDto = new DomicilioEntradaDto("Calle larga", 20, "Envigado", "Antioquia");
 
-        PacienteEntradaDto pacienteEntradaDto = new PacienteEntradaDto("Maria", "Moreno", 89546, LocalDate.of(2020, 12, 31), domicilioEntradaDto);
+        PacienteEntradaDto pacienteEntradaDto = new PacienteEntradaDto("Milena", "Zapata", 45698, LocalDate.of(2020, 11, 20), domicilioEntradaDto);
         pacienteService.registrarPaciente(pacienteEntradaDto);
 
-        OdontologoEntradaDto odontologoEntradaDto = new OdontologoEntradaDto(12354, "Antonio", "Sarmiento");
+        OdontologoEntradaDto odontologoEntradaDto = new OdontologoEntradaDto(45128, "Tomas", "Rendon");
         odontologoService.registrarOdontologo(odontologoEntradaDto);
 
-        TurnoEntradaDto turnoEntradaDto = new TurnoEntradaDto(1L,1L, LocalDateTime.of(2023,9,26,9,3,0));
+        TurnoEntradaDto turnoEntradaDto = new TurnoEntradaDto(1L,1L, LocalDateTime.of(2023,12,26,9,3,0));
         TurnoSalidaDto turnoSalidaDto = turnoService.registrarTurno(turnoEntradaDto);
 
         try{
